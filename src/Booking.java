@@ -59,7 +59,7 @@ public class Booking {
     public String toString() {
         return "Booking{" +
                 "bookingId=" + bookingId +
-                ", vehicle=" + vehicle +
+                ", vehicle=" + vehicle +"\n"+
                 ", parkingSlot=" + parkingSlot +
                 ", startTime=" + startTime +
                 ", endTime=" + endTime +
