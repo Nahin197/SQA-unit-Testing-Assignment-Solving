@@ -131,7 +131,6 @@ public class BookingTest {
 
     @Test
     void zeroAmountTesting() {
-
         assertThrows(Exception.class, () -> {new Booking(4, v, pt, s1, e1, 0.0);});
 
     }

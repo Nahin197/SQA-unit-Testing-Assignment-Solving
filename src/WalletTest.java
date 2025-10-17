@@ -205,6 +205,21 @@ public class WalletTest {
         assertEquals(0.95, w.getBalance(), "Floating-point Problem " );
     }
 
+    @Test
+    public void maximumDoubleBalanceTest() {
+        Wallet w = new Wallet(Double.MAX_VALUE);
+
+
+        assertEquals(Double.MAX_VALUE, w.getBalance());
+
+
+        w.addFunds(100);
+
+
+        assertThrows(Exception.class,()-> w.getBalance());
+
+    }
+
 
 
 
