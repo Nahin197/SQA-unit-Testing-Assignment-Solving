@@ -1,191 +1,207 @@
-#Software Testing and Quality Assurance Assignment
-
-
+---
 # 🚗 Parking Slot Booking System
 
-### *Unit Testing with Intentional Defects (Java)*
+### *Software Testing & Quality Assurance – Solved Assignment*
+
+![Java](https://img.shields.io/badge/Java-17-blue)
+![JUnit](https://img.shields.io/badge/JUnit-5-green)
+![Status](https://img.shields.io/badge/Assignment-Solved-success)
+![Type](https://img.shields.io/badge/Project-Academic-orange)
+
+---
 
 ## 📘 Project Overview
 
-This project is a **Parking Slot Booking System** developed for the course **Software Testing & Quality Assurance (CSE 4495)**.
-The main goal of this project is to **apply unit testing techniques**, identify **software defects**, and analyze system behavior under different scenarios.
+This repository contains the **solved version of an academic assignment** given in the course
+**Software Testing & Quality Assurance (CSE 4495)**.
 
-⚠️ **Important:**
-This project intentionally contains **logical and validation defects** to demonstrate how unit testing helps detect real-world issues.
+The assignment was provided by the course instructor, and **this project was solved collaboratively by me and my teammate** as part of the course requirement.
 
----
+The work includes:
 
-## 🧠 Key Concepts Covered
+* Unit test implementation
+* Defect identification
+* System behavior analysis
+* Documentation of issues and fixes
 
-* Unit Testing using **JUnit**
-* Software defect identification
-* Input validation testing
-* Boundary value analysis
-* Exception handling
-* Business rule verification
-* Object-oriented design testing
+✅ **All code, testing, and analysis in this repository were completed by our team.**
 
 ---
 
-## 🏗 System Architecture
+## 🎯 Assignment Objectives
 
-### Main Components
+The main objectives of this assignment were to:
 
-| Component         | Description                                 |
-| ----------------- | ------------------------------------------- |
-| **Wallet**        | Manages balance and money transfer          |
-| **Vehicle**       | Represents a vehicle with wallet            |
-| **ParkingSlot**   | Represents a parking space                  |
-| **Booking**       | Manages booking lifecycle                   |
-| **ParkingSystem** | Core controller                             |
-| **Enums**         | VehicleType, ParkingSlotType, BookingStatus |
+* Apply **unit testing using JUnit**
+* Identify **logical and runtime defects**
+* Analyze **real-world business logic**
+* Understand **software quality assurance practices**
+* Improve debugging and testing skills
+
+---
+
+## 🧠 What We Solved in This Project
+
+✔ Implemented all required unit tests
+✔ Executed test cases for all modules
+✔ Identified intentional and logical defects
+✔ Verified booking, wallet, and slot logic
+✔ Documented issues and expected behavior
+✔ Successfully completed the assignment as a team
+
+---
+
+## 🧩 System Components
+
+| Component         | Description                          |
+| ----------------- | ------------------------------------ |
+| **Wallet**        | Manages balance and transactions     |
+| **Vehicle**       | Represents a vehicle                 |
+| **ParkingSlot**   | Represents parking spaces            |
+| **Booking**       | Handles booking lifecycle            |
+| **ParkingSystem** | Core system controller               |
+| **Enums**         | VehicleType, SlotType, BookingStatus |
 
 ---
 
 ## 🔄 System Workflow
 
 1. Vehicle requests a parking slot
-2. System checks:
+2. System validates:
 
+   * Time range
    * Slot availability
-   * Time validity
    * Vehicle compatibility
 3. Booking is created
-4. Payment is transferred to system wallet
+4. Payment is deducted
 5. Booking is either:
 
-   * **Completed** → 80% paid to slot owner
-   * **Cancelled** → 90% refunded to vehicle
+   * **Completed** → Slot owner receives payment
+   * **Cancelled** → Partial refund is issued
 
 ---
 
 ## 💰 Pricing Logic
 
 ```
-Price = Hours × BaseRate × VehicleMultiplier × SlotMultiplier
+Price = Duration × Base Rate × Vehicle Multiplier × Slot Multiplier
 ```
 
-### Vehicle Multipliers
+### Vehicle Pricing
 
-| Vehicle Type | Multiplier         |
-| ------------ | ------------------ |
-| Bicycle      | 0.2                |
-| Motorcycle   | 0.5                |
-| Car          | 1.0                |
-| Microcar     | ❌ Missing (Defect) |
-| Bus          | 2.0                |
-| Truck        | 3.0                |
-
-### Slot Multipliers
-
-| Slot Type   | Multiplier |
-| ----------- | ---------- |
-| Compact     | 0.8        |
-| Regular     | 1.0        |
-| Large       | 1.5        |
-| Handicapped | 1.2        |
+| Vehicle    | Multiplier                    |
+| ---------- | ----------------------------- |
+| Bicycle    | 0.2                           |
+| Motorcycle | 0.5                           |
+| Car        | 1.0                           |
+| Microcar   | ❌ Missing (Defect Identified) |
+| Bus        | 2.0                           |
+| Truck      | 3.0                           |
 
 ---
 
 ## 🧪 Testing Summary
 
-### ✅ Passed Tests
+### ✅ Successfully Tested
 
-* Wallet balance operations
+* Wallet operations
 * Booking creation
 * Slot availability
-* Overlapping time detection
+* Time validation
 * Booking completion
-* Refund processing
-* Singleton behavior
+* Cancellation logic
 
-### ❌ Failed Tests (Intentional Defects)
+### ❌ Defects Identified
 
-| Issue                | Description         |
-| -------------------- | ------------------- |
-| Negative balance     | Not validated       |
-| Null object handling | Missing checks      |
-| Zero amount booking  | Allowed incorrectly |
-| Cancel → Complete    | Not restricted      |
-| MICROCAR pricing     | Missing case        |
-| Time validation      | Weak validation     |
-| Double payment       | Possible            |
-| Null slot / vehicle  | Not handled         |
+* Missing null validation
+* Negative values allowed
+* Zero-amount booking accepted
+* Missing MICROCAR pricing
+* Booking state violations
+* Weak exception handling
+
+> These defects were **intentionally identified and documented as part of the assignment solution.**
 
 ---
 
-## 🐞 Major Defects Identified
+## 🐞 Major Issues Found
 
-* ❌ No null checks in constructors
-* ❌ Negative and zero values accepted
-* ❌ Booking lifecycle not enforced
-* ❌ Missing MICROCAR pricing
-* ❌ Double transaction possible
-* ❌ Improper exception handling
+| Issue            | Description               |
+| ---------------- | ------------------------- |
+| Null handling    | Missing null checks       |
+| Negative balance | Accepted incorrectly      |
+| Zero booking     | Causes logic errors       |
+| State violation  | Cancel → Complete allowed |
+| Pricing bug      | MICROCAR not handled      |
+| Validation       | Weak input validation     |
 
 ---
 
 ## 🛠 Suggested Improvements
 
-✔ Add input validation
-✔ Enforce booking state rules
-✔ Add null safety
-✔ Fix pricing logic
-✔ Prevent double payment
+✔ Add strict input validation
+✔ Enforce booking lifecycle rules
+✔ Prevent double transactions
 ✔ Improve exception handling
-✔ Validate time ranges strictly
+✔ Fix pricing logic
+✔ Strengthen time validation
 
 ---
 
-## 🧪 Testing Tools Used
+## 🧪 Tools & Technologies Used
 
+* **Java 17**
 * **JUnit 5**
 * **IntelliJ IDEA**
-* **Java 17**
+* **Git & GitHub**
 
 ---
 
 ## 📁 Project Structure
 
 ```
-📦 ParkingSystem
- ┣ 📂 src
- ┃ ┣ Wallet.java
- ┃ ┣ Vehicle.java
- ┃ ┣ ParkingSlot.java
- ┃ ┣ Booking.java
- ┃ ┣ ParkingSystem.java
- ┃ ┣ Enums/
- ┣ 📂 test
- ┃ ┣ WalletTest.java
- ┃ ┣ VehicleTest.java
- ┃ ┣ BookingTest.java
- ┃ ┣ ParkingSlotTest.java
- ┃ ┣ ParkingSystemTest.java
- ┣ README.md
+SQA-unit-Testing-Assignment-Solving/
+│
+├── README.md
+├── documentation.md
+├── sqa-test-parking-system-master.iml
+│
+└── src/
+    ├── Booking.java
+    ├── BookingStatus.java
+    ├── BookingTest.java
+    ├── ParkingSlot.java
+    ├── ParkingSlotTest.java
+    ├── ParkingSlotType.java
+    ├── ParkingSystem.java
+    ├── ParkingSystem2.java
+    ├── Vehicle.java
+    ├── VehicleTest.java
+    ├── VehicleType.java
+    ├── Wallet.java
+    ├── WalletTest.java
 ```
 
 ---
 
-## 🎯 Learning Outcome
+## 🎓 Academic Declaration
 
-This project helped in understanding:
-
-✔ Unit testing practices
-✔ Real-world bug detection
-✔ Importance of validation
-✔ Exception handling
-✔ Software quality assurance
-✔ Test-driven thinking
+✔ This assignment was provided by the course instructor
+✔ The solution was completed **collaboratively by me and my teammate**
+✔ All testing and analysis were done by our team
+✔ This repository is for **academic and learning purposes only**
 
 ---
 
-## 👨‍🎓 Author
+## 👨‍🎓 Authors
 
-**Course:** Software Testing & Quality Assurance
-**Project Type:** Academic Assignment
-**Language:** Java
-**Testing Framework:** JUnit
+* **Student 1:** *Md. Khademul Islam Nahin*
+* **Student 2:** *Md. Abdullah Al Imran*
+* **Course:** Software Testing & Quality Assurance
+* **University:** United International University
+
+---
 
 
 
+Just tell me 👍
