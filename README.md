@@ -1,8 +1,5 @@
 #Software Testing and Quality Assurance Assignment
-Here is a **clean, professional, GitHub-ready README.md** you can **directly copy–paste** into your repository.
-It is written clearly, academically, and matches your project exactly.
 
----
 
 # 🚗 Parking Slot Booking System
 
