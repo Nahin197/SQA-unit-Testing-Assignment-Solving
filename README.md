@@ -190,13 +190,5 @@ This project helped in understanding:
 **Language:** Java
 **Testing Framework:** JUnit
 
----
 
-If you want, I can also:
-✅ Format this for **GitHub Markdown preview**
-✅ Add **badges (JUnit, Java)**
-✅ Create a **report version (PDF)**
-✅ Add **screenshots explanation**
-
-Just tell me 👍
 
