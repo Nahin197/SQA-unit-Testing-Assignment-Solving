@@ -27,6 +27,17 @@ The work includes:
 ✅ **All code, testing, and analysis in this repository were completed by our team.**
 
 ---
+## 📋 Test Case Study (PDF)
+
+The file **`Test Case/SQ_Test Case Studies.pdf`** contains a formal system test report with.
+
+📄 **[View Test Case Report on Google Drive](https://drive.google.com/file/d/1LfmjJBQvHKTpEdjYXu3LhkV48UNMIoaO/view?usp=drive_link)**
+
+- **Test Plan** — Input/parameter choices per endpoint and expected outputs
+- **Test Cases Table** — Test ID, Class.Method, Why this test, Verdict, Comment/Observations
+- **Defect Reports** — Defect ID, Class.Method, Description, Suggested Fix
+
+---
 
 ## 🎯 Assignment Objectives
 
